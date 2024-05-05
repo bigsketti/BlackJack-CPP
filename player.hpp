@@ -6,16 +6,20 @@
 
 class Player {
 	public:
-		Player(); // Default constructor
-		Player(int money); // Constructor
+		//constructors
+		Player(); 
+		Player(int money);
 		
+		//setters
 		void SetBet(int playerBet);
 		void SetCash(int playerCash);
 
+		//getters
 		int GetBet() const;
 		int GetCash() const;
 		int GetHandValue() const;
 
+		//other functions
 		void DealCard(Card card);
 
 private: 
