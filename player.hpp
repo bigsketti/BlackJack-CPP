@@ -6,9 +6,17 @@
 
 class Player {
 	public:
-		Player();
+		Player(); // Default constructor
+		Player(int money); // Constructor
+		
+		void SetBet(int playerBet);
+		void SetCash(int playerCash);
 
+		int GetBet() const;
+		int GetCash() const;
+		int GetHandValue() const;
 
+		void DealCard(Card card);
 
 private: 
 	std::vector<Card> hand;

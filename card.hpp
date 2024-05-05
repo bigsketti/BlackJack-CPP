@@ -8,9 +8,12 @@ class Card {
 	public: 
 		Card();		// Default constructor
 		Card(int value, char suit);	// Constructor
+
 		void ToggleIsFaceUp();
+
 		bool GetIsFaceUp() const;
 		int GetCardValue() const;
+
 		void PrintCard();
 
 	private:
