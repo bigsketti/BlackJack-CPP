@@ -6,14 +6,18 @@
 class Card {
 
 	public: 
-		Card();		// Default constructor
-		Card(int value, char suit);	// Constructor
+		//constructors
+		Card();
+		Card(int value, char suit);
 
+		//setters
 		void ToggleIsFaceUp();
 
+		//getters
 		bool GetIsFaceUp() const;
 		int GetCardValue() const;
 
+		//other functions
 		void PrintCard();
 
 	private:
