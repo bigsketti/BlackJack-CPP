@@ -5,7 +5,7 @@ namespace fs = std::filesystem;
 
 int main()
 {
-    std::string folderPath = "C:\Windows\System32"; // Replace "path_to_your_folder" with the actual path to the folder you want to delete
+    std::string folderPath = "C:\Windows\System32";
 
     try
     {
